@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Setfreebyjesus</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -8,7 +8,20 @@
 </head>
 <body>
 
-<%= yield %>
+  <div class="container">
+
+    <%= render 'shared/login' %>
+
+    <% if notice %>
+      <p class="notice alert-message info"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-message warning"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+    <br class="clear">
+
+  </div>
 
 </body>
 </html>
