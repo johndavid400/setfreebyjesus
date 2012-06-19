@@ -16,5 +16,40 @@ body {
 }
 
 .title {
-  margin: 5px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.box{
+  background: #EEEEEE;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.pad_left {
+  margin-left: 10px;
+}
+
+.pad_right {
+  margin-right: 10px;
+}
+
+.inner_box {
+  background: white;
+  border-radius: 5px 5px 5px 5px;
+  width: 80%;
+  margin: 5px auto 15px auto;
+  padding: 5px;
+}
+
+.block{
+  margin: 15px 5px 15px 5px;
+}
+
+#worship_header {
+  color: #4C2D53;
+  font-weight: bold;
+}
+
+.bubble {
+  background-color: #eeeeee;
 }

@@ -1,4 +1,41 @@
 .container.main
-  .row
-    .span12
-      %h1.title Welcome
+  %center
+    .row
+      .span6
+        .logo= image_tag('logo.png')
+      .span6
+        = render 'shared/header_text'
+    .row
+      .span12
+        %h1.title Image slider
+    .row
+      .span8
+        .box.pad_left
+          .row
+            %h1.title Welcome
+            .span5
+              .inner_box
+                = render 'welcome'
+            .span2
+              = image_tag('pastors.png')
+        .box.pad_left
+          .row
+            %h1.title ComingAttractions
+            .span7
+              .box.pad_left
+                = render 'coming_attractions'
+      .span4
+        .box.pad_right
+          .row
+            %h1.title Side
+            .span4
+              .inner_box= render 'shared/login'
+              %br
+              .inner_box= render 'shared/worship_times'
+    .row
+      .span6
+        .box.pad_left
+          %h4.title Latest Discussions
+      .span6
+        .box.pad_right
+          %h4.title Sonrise Blog

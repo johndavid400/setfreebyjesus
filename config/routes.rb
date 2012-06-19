@@ -1,5 +1,7 @@
 Setfreebyjesus::Application.routes.draw do
 
+  resources :posts
+
   devise_for :admins
 
   devise_for :users
