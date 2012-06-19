@@ -19,5 +19,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'bootstrap-sass'
+gem "will_paginate"
+gem "rails_admin"
 
 
