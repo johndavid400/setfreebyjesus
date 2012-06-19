@@ -8,9 +8,15 @@
 </head>
 <body>
 
-  <div class="container">
-
-    <%= render 'shared/login' %>
+  <div class="container main">
+    <div class="row">
+      <div class="span6">
+        <div class="logo"><%= image_tag('logo.png', :size => '350x150') %></div>
+      </div>
+      <div class="span6">
+        <div class="scripture"><%= render 'shared/header_text' %></div>
+      </div>
+    </div>
 
     <% if notice %>
       <p class="notice alert-message info"><%= notice %></p>
@@ -21,7 +27,37 @@
     <%= yield %>
     <br class="clear">
 
-  </div>
+    <center>
+      <div class="row">
 
-</body>
-</html>
+        <div class="span6">
+          <div class="box pad_left">
+            <h4><div class="title">Latest Discussions</div></h4>
+          </div>
+        </div>
+
+        <div class="span6">
+          <div class="box pad_right">
+            <h4><div class="title">Sonrise Blog</div></h4>
+          </div>
+        </div>
+
+        <div class="row footer">
+          <div class="span4">
+            <%= link_to image_tag('church.png', :class => "imgshadow"), root_path %>
+          </div>
+          <div class="span4">
+            <%= link_to image_tag('blogd.png', :class => "imgshadow"), posts_path %>
+          </div>
+          <div class="span4">
+            <%= link_to image_tag('register.jpg', :class => "imgshadow"), new_user_registration_path %>
+          </div>
+        </div>
+
+      </div>
+    </center>
+
+      </div>
+
+    </body>
+  </html>

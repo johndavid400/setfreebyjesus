@@ -1,48 +1,29 @@
-.container.main
+.row
+  .span12
+    = render 'slider'
+.row
+  .span8
+    .box.pad_left
+      .row
+        %center
+          %h1.title Welcome
+        .span5
+          .inner_box
+            = render 'welcome'
+        .span2
+          = image_tag('pastors.png', :class => "imgshadow")
+    .box.pad_left
+      .row
+        %center
+          %h1.title Coming Attractions
+        .span7
+          .box.pad_left
+            = render 'coming_attractions'
   %center
-    .row
-      .span6
-        .logo= image_tag('logo.png')
-      .span6
-        = render 'shared/header_text'
-    .row
-      .span12
-        = render 'slider'
-    .row
-      .span8
-        .box.pad_left
-          .row
-            %h1.title Welcome
-            .span5
-              .inner_box
-                = render 'welcome'
-            .span2
-              = image_tag('pastors.png')
-        .box.pad_left
-          .row
-            %h1.title ComingAttractions
-            .span7
-              .box.pad_left
-                = render 'coming_attractions'
-      .span4
-        .box.pad_right
-          .row
-            %h1.title Side
-            .span4
-              .inner_box= render 'shared/login'
-              %br
-              .inner_box= render 'shared/worship_times'
-    .row
-      .span6
-        .box.pad_left
-          %h4.title Latest Discussions
-      .span6
-        .box.pad_right
-          %h4.title Sonrise Blog
-    .row.footer
-      .span4.church
-        = image_tag('church.png')
-      .span4.blog
-        = image_tag('blogd.png')
-      .span4.register
-        = image_tag('register.jpg')
+    .span4
+      .box.pad_right
+        .row
+          .span4
+            .inner_box.top= render 'shared/login'
+            %br
+            .inner_box.bottom= render 'shared/worship_times'

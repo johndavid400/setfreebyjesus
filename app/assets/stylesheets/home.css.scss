@@ -6,6 +6,7 @@
 body {
 #  background: url('bg.png') no-repeat scroll 50% 0 transparent;
 #  background-color: #4C2D53;
+  margin-top: 20px;
 }
 
 .main {
@@ -15,14 +16,27 @@ body {
   margin-top: 30px;
 }
 
+.logo {
+  margin: 5px 5px 15px 10px;
+}
+
+.scripture {
+  margin: 20px 20px 20px 20px;
+}
+
 .title {
   margin: 15px;
   padding: 10px;
+  color: #4A85C2;
 }
 
 .box{
   background: #EEEEEE;
   border-radius: 5px 5px 5px 5px;
+}
+
+.pad {
+  padding: 10px 10px 10px 10px;
 }
 
 .pad_left {
@@ -37,8 +51,15 @@ body {
   background: white;
   border-radius: 5px 5px 5px 5px;
   width: 80%;
-  margin: 5px auto 15px auto;
+  margin: 5px auto 5px auto;
   padding: 5px;
+}
+
+.top{
+  margin-top: 15px;
+}
+.bottom{
+  margin-bottom: 15px;
 }
 
 .block{
@@ -52,8 +73,29 @@ body {
 
 .bubble {
   background-color: #eeeeee;
+  margin: 5px;
 }
 
 .footer {
   margin-bottom: 30px;
 }
+
+#ref {
+  color: #800080;
+  font-weight: bold;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.imgshadow {
+  background:#FFFFFF;
+  padding:4px;
+  border:1px solid #777777;
+  margin-top:5px;
+  -moz-box-shadow:0px 0px 5px #666666;
+  -webkit-box-shadow:0px 0px 5px #666666;
+  box-shadow:0px 0px 5px #666666;
+}
+
