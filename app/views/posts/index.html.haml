@@ -1,23 +1,15 @@
-%h1 Listing posts
+.body_white
+  %h1 Sonrise Blog
 
-%table
-  %tr
-    %th Name
-    %th Text
-    %th User
-    %th
-    %th
-    %th
+  .post.row
+    .span12
+      - @posts.each do |post|
+        %center
+          %h3.purple= post.name
+        = post.text
+        = post.user_id
+        = link_to 'Show', post
 
-  - @posts.each do |post|
-    %tr
-      %td= post.name
-      %td= post.text
-      %td= post.user_id
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+  %br
 
-%br
-
-= link_to 'New Post', new_post_path
+  = link_to 'New Post', new_post_path
