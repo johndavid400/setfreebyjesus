@@ -2,8 +2,6 @@
   %h6.pad User Panel
 - if current_user
   = link_to('Sign out', destroy_user_session_path, :method => :delete, :class => "btn")
-- elsif current_admin
-  = link_to('Sign out', destroy_admin_session_path, :method => :delete, :class => "btn")
 - else
   = form_tag user_session_path do
     = text_field_tag 'user[email]'
