@@ -19,11 +19,11 @@
         .span7
           .box.pad_left
             = render 'coming_attractions'
-  %center
-    .span4
-      .box.pad_right
-        .row
-          .span4
+  .span4
+    .box.pad_right
+      .row
+        .span4
+          %center
             .inner_box.top= render 'shared/login'
-            %br
-            .inner_box.bottom= render 'shared/worship_times'
+          %br
+          .inner_box.bottom#worship_times= render 'shared/worship_times'

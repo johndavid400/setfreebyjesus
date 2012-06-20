@@ -4,9 +4,24 @@
 @import "bootstrap";
 
 body {
-#  background: url('bg.png') no-repeat scroll 50% 0 transparent;
-#  background-color: #4C2D53;
+  background-color: #4C2D53 !important;
+  background: url('page_bg.png') repeat-x scroll 50% 0 #4C2D53;
   margin-top: 20px;
+}
+
+.body_white{
+  padding: 20px;
+  background: white;
+}
+
+.page {
+  background: url('page_bg_img.jpg') no-repeat scroll 50% 0 transparent;
+}
+
+.special {
+  margin-left: 1px;
+  margin-top: -20px;
+  background: url('logo.png') no-repeat scroll 50% 0 transparent;
 }
 
 .main {
@@ -17,7 +32,11 @@ body {
 }
 
 .logo {
-  margin: 5px 5px 15px 10px;
+  margin: 5px 5px 15px 0px;
+  float: left;
+  width: 350;
+  height: 150px; 
+  background: #4C2D53;
 }
 
 .scripture {
@@ -66,9 +85,18 @@ body {
   margin: 15px 5px 15px 5px;
 }
 
-#worship_header {
-  color: #4C2D53;
+#worship_times {
+  background-color: #FFFFAA;
+}
+
+.times{
+ margin: 20px 20px 20px 40px;
+}
+
+.time_head{
+  color: #930080;
   font-weight: bold;
+  margin-top: 5px;
 }
 
 .bubble {

@@ -12,5 +12,10 @@ Setfreebyjesus::Application.routes.draw do
   get "home/index"
   get "home/about"
   get "home/contact"
+  get "home/invite"
+  get "home/donations"
+  get "home/ministries"
+  get "home/founders"
+  get "home/orphanage"
 
 end
