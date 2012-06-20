@@ -1,13 +1,14 @@
-%p#notice= notice
+.body_white
+  %h1= @post.name
 
-%p
-  %b Name:
-  = @post.name
-%p
-  %b Text:
-  = @post.text
-%p
-  %b User:
-  = @post.user_id
+  .post.row
+    .span10.offset1
+      %center
+        %h3.purple= link_to @post.name, @post
+      = @post.text.html_safe
+      %p
+      .post_footer= "Posted By: #{@post.admin.username} | #{@post.created_at.strftime("Published on %m/%d/%Y at %I:%M%p")}"
 
-= link_to 'Back', posts_path
+  %br
+
+  = link_to 'New Post', new_post_path

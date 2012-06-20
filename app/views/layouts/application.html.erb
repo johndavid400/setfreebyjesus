@@ -25,7 +25,6 @@
         </div>
 
         <div class="body_white">
-          <div class="pad">
             <% if notice %>
               <p class="notice alert-message info"><%= notice %></p>
             <% end %>
@@ -33,7 +32,6 @@
               <p class="alert alert-message warning"><%= alert %></p>
             <% end %>
             <%= yield %>
-          </div>
         </div>
         <br class="clear">
 
@@ -43,12 +41,14 @@
             <div class="span6">
               <div class="box pad_left">
                 <h4><div class="title">Latest Discussions</div></h4>
+                <%= render 'shared/discussion' %>
               </div>
             </div>
 
             <div class="span6">
-              <div class="box pad_right">
+              <div class="bottom top box pad_right">
                 <h4><div class="title">Sonrise Blog</div></h4>
+                <%= render 'shared/recent_posts' %>
               </div>
             </div>
 

@@ -53,6 +53,11 @@ body {
   border-radius: 5px 5px 5px 5px;
 }
 
+.post_footer {
+  @extend .box;
+  padding: 5px;
+}
+
 .pad {
   padding: 10px 10px 10px 10px;
 }
@@ -93,7 +98,11 @@ body {
 }
 
 .purple{
-  color: #930080;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  a {
+    color: #930080;
+  }
 }
 
 .time_head{
@@ -109,6 +118,7 @@ body {
 
 .footer {
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 #ref {
