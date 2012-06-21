@@ -24,30 +24,28 @@
           </div>
         </div>
 
-        <div class="body_white">
-            <% if notice %>
-              <p class="notice alert-message info"><%= notice %></p>
-            <% end %>
-            <% if alert %>
-              <p class="alert alert-message warning"><%= alert %></p>
-            <% end %>
-            <%= yield %>
-        </div>
-        <br class="clear">
-
+      <div class="body_white">
+          <% if notice %>
+            <p class="notice alert-message info"><%= notice %></p>
+          <% end %>
+          <% if alert %>
+            <p class="alert alert-message warning"><%= alert %></p>
+          <% end %>
+          <%= yield %>
         <center>
           <div class="row">
+            <br class="clear">
 
             <div class="span6">
               <div class="box pad_left">
-                <h4><div class="title">Latest Discussions</div></h4>
+                <h3><div class="title">Latest Discussions</div></h3>
                 <%= render 'shared/discussion' %>
               </div>
             </div>
 
             <div class="span6">
               <div class="bottom top box pad_right">
-                <h4><div class="title">Sonrise Blog</div></h4>
+                <h3><div class="title">Sonrise Blog</div></h3>
                 <%= render 'shared/recent_posts' %>
               </div>
             </div>
@@ -66,6 +64,7 @@
 
           </div>
         </center>
+      </div>
 
       </div>
     </div>
