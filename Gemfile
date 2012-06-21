@@ -22,5 +22,9 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'rails_admin'
+gem 'ckeditor_rails', :require => 'ckeditor-rails'
+gem 'truncate_html'
+gem "nokogiri"
+gem "htmlentities"
 
 

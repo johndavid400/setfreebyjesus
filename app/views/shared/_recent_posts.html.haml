@@ -3,6 +3,5 @@
     - @posts.each do |post|
       %center
         %h6.purple= link_to post.name, post
-      =h truncate(post.text.html_safe, :length => 100)
+      .post_footer= "Posted by: #{post.admin.username} #{post.created_at.strftime("on %m/%d/%Y")}"
       %p
-      .post_footer= "Posted By: #{post.admin.username} #{post.created_at.strftime("on %m/%d/%Y")}"

@@ -43,6 +43,9 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.2)
       ffi (~> 1.0.6)
+    ckeditor_rails (3.6.3.1)
+      railties (~> 3.0)
+      thor (~> 0.14)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -87,6 +90,7 @@ GEM
       railties (~> 3.0)
     hike (1.2.1)
     hpricot (0.8.6)
+    htmlentities (4.3.1)
     i18n (0.6.0)
     journey (1.0.4)
     jquery-rails (2.0.2)
@@ -186,6 +190,7 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    truncate_html (0.5.5)
     tzinfo (0.3.33)
     uglifier (1.2.5)
       execjs (>= 0.3.0)
@@ -200,17 +205,21 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  ckeditor_rails
   coffee-rails (~> 3.2.1)
   cucumber-rails
   debugger
   devise
   execjs
   haml-rails
+  htmlentities
   jquery-rails
+  nokogiri
   pg
   rails (= 3.2.6)
   rails_admin
   rspec
   sass-rails (~> 3.2.3)
   therubyracer
+  truncate_html
   uglifier (>= 1.0.3)
