@@ -1,14 +1,15 @@
-.body_white
-  %h1= @post.name
+.body_white.pad
+  %center
+    %h1.purple= @post.name
 
   .post.row
     .span10.offset1
-      %center
-        %h3.purple= link_to @post.name, @post
       = @post.text.html_safe
       %p
-      .post_footer= "Posted By: #{@post.admin.username} | #{@post.created_at.strftime("Published on %m/%d/%Y at %I:%M%p")}"
+      %center
+        .post_footer= "Posted By: #{@post.admin.username} | #{@post.created_at.strftime("Published on %m/%d/%Y at %I:%M%p")}"
 
   %br
 
-  = link_to 'New Post', new_post_path
+  - if current_admin
+    = link_to 'New Post', new_post_path

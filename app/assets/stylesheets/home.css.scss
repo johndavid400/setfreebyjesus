@@ -49,6 +49,7 @@ body {
   color: #4A85C2;
 }
 
+
 .box{
   background: #EEEEEE;
   border-radius: 5px 5px 5px 5px;
@@ -141,6 +142,13 @@ body {
   box-shadow:0px 0px 5px #666666;
 }
 
-.post {
-  padding: 10px;
+.sonrise{
+  color: #930080;
+}
+
+#post_title {
+  margin-top: 30px;
+  a {
+    color: #4A85C2;
+  }
 }

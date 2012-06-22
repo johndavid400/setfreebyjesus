@@ -1,15 +1,18 @@
-.body_white
-  %h1 Sonrise Blog
+.body_white.pad
+  %center
+    %h1.sonrise Sonrise Blog
+  %hr
 
-  .post.row
+  .row
     .span10.offset1
       - @posts.each do |post|
         %center
-          %h3.purple= link_to post.name, post
+          %h3#post_title= link_to post.name, post
         = post.text.html_safe
         %p
         .post_footer= "Posted By: #{post.admin.username} | #{post.created_at.strftime("Published on %m/%d/%Y at %I:%M%p")}"
 
   %br
 
-  = link_to 'New Post', new_post_path
+    %center
+      .btn.btn-warning= link_to 'New Post', new_post_path
