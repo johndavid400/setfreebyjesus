@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
   before_filter :get_posts
 
   def get_posts
-    @posts = Post.all.take(3)
+    @posts = Post.all.take(3).reverse
   end
 end
