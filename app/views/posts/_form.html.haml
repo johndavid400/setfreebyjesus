@@ -14,5 +14,8 @@
     = f.text_area :text, :class => "ckeditor"
   .field
     = f.hidden_field :admin_id
+  .field
+    = f.label :created_at
+    = f.date_select :created_at
   .actions
     = f.submit 'Save'

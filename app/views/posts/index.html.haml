@@ -2,7 +2,9 @@
   %center
     %h1.sonrise Sonrise Blog
   %hr
-
+  .row
+    .row10.offset1
+      .pull-left.btn.btn-warning= link_to 'New Post', new_post_path
   .row
     .span10.offset1
       - @posts.each do |post|
@@ -11,8 +13,4 @@
         = post.text.html_safe
         %p
         .post_footer= "Posted By: #{post.admin.username} | #{post.created_at.strftime("Published on %m/%d/%Y at %I:%M%p")}"
-
   %br
-
-    %center
-      .btn.btn-warning= link_to 'New Post', new_post_path
