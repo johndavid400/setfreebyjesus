@@ -19,5 +19,5 @@
           %td= element.title
           %td
             = link_to 'Edit', edit_element_path(element)
-            = link_to 'Delete', element, :method => :delete
+            = link_to 'Delete', element, :method => :delete, :confirm => "Are you sure you would like to delete this element?"
 

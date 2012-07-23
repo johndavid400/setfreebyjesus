@@ -24,8 +24,8 @@ class ElementsController < ApplicationController
   end
 
   def update
-    @element = Element.new(params[:element])
-    if @element.save
+    @element = Element.find(params[:id])
+    if @element.update_attributes(params[:element])
       flash[:notice] = "Element saved successfully"
       redirect_to elements_path
     else
