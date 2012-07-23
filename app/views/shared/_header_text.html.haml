@@ -1,5 +1,5 @@
 - if @header_scripture
   .bubble
     .pad
-      = @header_scripture.body
-      .pull-right#ref= @header_scripture.title
+      = @header_scripture.body.html_safe
+      .pull-right#ref= @header_scripture.title.html_safe

@@ -2,5 +2,6 @@
   - @worship_times.each do |w|
     %center
       %h3= w.title
-    = w.body.html_safe
-    %p
+    .times
+      = w.body.html_safe
+      %p
