@@ -1,2 +1,3 @@
-- @welcome_elements.each do |e|
-  = e.body.html_safe
+- if @welcome_elements
+  - @welcome_elements.each do |e|
+    = e.body.html_safe

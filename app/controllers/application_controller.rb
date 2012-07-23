@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   before_filter :get_posts
 
   def get_posts
-    @posts = Post.all.take(3).reverse
+#    @posts = Post.all.take(3).reverse
+    @posts = Post.order("created_at DESC").take(3)
+    @header_scripture = Element.find_by_section("Scripture")
   end
 end

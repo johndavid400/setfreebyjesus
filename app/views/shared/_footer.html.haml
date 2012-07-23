@@ -5,5 +5,11 @@
     = link_to "About", home_founders_path
     |
     = link_to "Contact", home_invite_path
-    |
-    = link_to "Pastor Login", new_admin_session_path
+    - if current_admin
+      |
+      = link_to('Sign out', destroy_admin_session_path, :method => :delete)
+      |
+      = link_to "Edit Site", elements_path
+    - else
+      |
+      = link_to "Pastor Login", new_admin_session_path
