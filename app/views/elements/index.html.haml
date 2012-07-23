@@ -1,0 +1,23 @@
+- if current_admin
+  .body_white.pad
+    %center
+      %h1
+        %span#red Site Editor
+    %hr
+    .pull-left.btn.btn-warning= link_to 'New Element', new_element_path
+    %p
+    %table.table.table-bordered.zebra-striped
+      %tr
+        %th Page
+        %th Section
+        %th Title
+        %th Actions
+      - @elements.each do |element|
+        %tr
+          %td= element.page
+          %td= element.section
+          %td= element.title
+          %td
+            = link_to 'Edit', edit_element_path(element)
+            = link_to 'Delete', element, :method => :delete
+

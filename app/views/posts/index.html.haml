@@ -2,9 +2,10 @@
   %center
     %h1.sonrise Sonrise Blog
   %hr
-  .row
-    .row10.offset1
-      .pull-left.btn.btn-warning= link_to 'New Post', new_post_path
+  - if current_admin
+    .row
+      .row10.offset1
+        .pull-left.btn.btn-warning= link_to 'New Post', new_post_path
   .row
     .span10.offset1
       - @posts.each do |post|

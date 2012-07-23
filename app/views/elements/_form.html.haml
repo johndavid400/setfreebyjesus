@@ -1,0 +1,30 @@
+.elements
+  = form_for @element do |f|
+    - if @element.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@element.errors.count, "error")
+          prohibited this item from being saved:
+        %ul
+          - @element.errors.full_messages.each do |msg|
+            %li= msg
+
+    %fieldset
+      %legend
+      .clearfix
+        = f.label 'Page'
+        .input= f.text_field :page
+      .clearfix
+        = f.label 'Section'
+        .input= f.text_field :section
+      .clearfix
+        = f.label 'Title'
+        .input= f.text_field :title
+      .clearfix
+        = f.label 'Body'
+        .input= f.text_area :body, :class => "ckeditor"
+        %p
+
+    %p.spacer
+    = button_to :submit
+

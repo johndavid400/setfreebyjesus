@@ -1,8 +1,7 @@
 Setfreebyjesus::Application.routes.draw do
-
   mount RailsAdmin::Engine => '/radmin', :as => 'rails_admin'
-
   resources :posts
+  resources :elements
 
   devise_for :admins
   devise_for :users
