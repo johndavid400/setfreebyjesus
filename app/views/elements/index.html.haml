@@ -4,7 +4,6 @@
       %h1
         %span#red Site Editor
     %hr
-    .pull-left.btn.btn-warning= link_to 'New Element', new_element_path
     %p
     %table.table.table-bordered.zebra-striped
       %tr
@@ -19,5 +18,4 @@
           %td= element.title
           %td
             = link_to 'Edit', edit_element_path(element)
-            = link_to 'Delete', element, :method => :delete, :confirm => "Are you sure you would like to delete this element?"
 
