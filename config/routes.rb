@@ -16,5 +16,6 @@ Setfreebyjesus::Application.routes.draw do
   get "home/ministries"
   get "home/founders"
   get "home/orphanage"
+  get "home/page_content"
 
 end
