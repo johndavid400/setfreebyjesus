@@ -12,13 +12,7 @@
             = render 'welcome'
         .span2
           = image_tag('pastors.png', :class => "imgshadow")
-    .box.pad_left
-      .row
-        %center
-          %h1.title Coming Attractions
-        .span7
-          .box.pad_left
-            = render 'coming_attractions'
+
   .span4
     .box.pad_right
       .row
@@ -27,3 +21,11 @@
             .inner_box.top= render 'shared/login'
           %br
           .inner_box.bottom#worship_times= render 'shared/worship_times'
+
+.row.spacer
+  .span12
+    .box.pad_left.pad_right
+      %center
+        %h1.title Coming Attractions
+      .box.pad
+        = render 'coming_attractions'
