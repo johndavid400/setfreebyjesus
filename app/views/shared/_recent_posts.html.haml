@@ -1,6 +1,6 @@
 .post.row.pad
   .span5.pad
-    - @posts.each do |post|
+    - @footer_posts.each do |post|
       %center
         %h6.purple= link_to post.name, post
       .post_footer= "Posted by: #{post.admin.username} #{post.created_at.strftime("on %m/%d/%Y")}"

@@ -214,6 +214,7 @@ DEPENDENCIES
   haml-rails
   htmlentities
   jquery-rails
+  kaminari
   nokogiri
   pg
   rails (= 3.2.6)

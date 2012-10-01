@@ -26,5 +26,6 @@ gem 'ckeditor_rails', :require => 'ckeditor-rails'
 gem 'truncate_html'
 gem "nokogiri"
 gem "htmlentities"
+gem 'kaminari'
 
 
