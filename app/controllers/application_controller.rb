@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   def get_posts
 #    @posts = Post.all.take(3).reverse
-    @posts = Post.order("created_at DESC").take(3)
+    @footer_posts = Post.order("created_at DESC").take(3)
     @header_scripture = Element.find_by_section("Scripture")
   end
 end
