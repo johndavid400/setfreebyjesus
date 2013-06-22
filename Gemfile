@@ -3,6 +3,10 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.6'
 gem 'pg'
 
+gem 'capistrano'
+gem 'rvm-capistrano'
+gem 'unicorn'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -14,9 +18,9 @@ end
 group :test do
   gem 'cucumber-rails'
   gem 'rspec'
-  gem 'debugger'
 end
 
+gem 'pry'
 gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
