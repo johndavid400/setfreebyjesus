@@ -28,3 +28,4 @@ gem "htmlentities"
 gem 'kaminari'
 
 gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms-blog', '~> 2.0.0'
