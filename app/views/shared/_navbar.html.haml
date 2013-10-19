@@ -1,11 +1,12 @@
-.navbar
-  .navbar-inner
-    .container
-      %ul.nav
-        %li= link_to "Home", root_path
-        %li= link_to "Sonrise Blog", posts_path
-        %li= link_to "About Us", home_about_path
-        %li= link_to "Ministries", home_ministries_path
-        %li= link_to "Contact Us", home_contact_path
-        %li= link_to "Products", root_path
-        %li= link_to "Donate", home_donations_path
+%nav.top-bar
+  %ul.title-area
+    %li.name
+    %li.toggle-topbar.menu-icon
+      %a{:href => "#"}
+        %span Menu
+  %section.top-bar-section
+    %ul.left
+      %li.divider
+      - Refinery::Page.menu.each do |page|
+        %li= link_to page.title, refinery.page_path(page)
+        %li.divider
