@@ -8,34 +8,39 @@
 
 %head
   = render '/refinery/head'
+  = render 'layouts/fonts'
 %body
-  .row
-    .large-12.columns
-      .page
-        %header
+  .page-content
+    %header
+      .row
+        .large-12.columns
+          .large-6.columns
+            .logo
+              Set Free by Jesus
+          .large-6.columns
+            .welcome
+              = Refinery::Page.find_by_title("Home").parts.find_by_title("Side Body").body.html_safe
+      .row
+        .large-12.columns
           .row
-            .large-12.columns
-              .large-6.columns
-                = image_tag("placeholder.png")
-              .large-6.columns
-                = Refinery::Page.find_by_title("Home").parts.find_by_title("Side Body").body.html_safe
-          .row
-            .large-12.columns
-              = render 'shared/navbar'
-        %section
-          .row
-            .large-12.columns
-              .large-12.columns
-                - if alert
-                  .alert.alert-message= alert
-                - if notice
-                  .notice.alert-message= notice
-                = yield
-        %footer
-          .row
-            .large-12.columns
-              .large-12.columns
-                = render '/refinery/footer'
+            = render 'shared/navbar'
+    %section
+      .row
+        .large-9.columns
+          .large-12.columns
+            - if alert
+              .alert.alert-message= alert
+            - if notice
+              .notice.alert-message= notice
+            = yield
+        .large-3.columns
+          = render 'shared/sidebar'
+  .footer-content
+    %footer
+      .row
+        .large-12.columns
+          .large-12.columns
+            = render '/refinery/footer'
 
 = javascript_include_tag "application"
 = yield :javascripts

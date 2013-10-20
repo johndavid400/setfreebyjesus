@@ -3,13 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import 'foundation';
+$purple: #4C2D53;
 
 body{
-  background: #583556;
-}
-
-.page{
-  background: white;
+  background: $purple;
+  background: url("page_bg_img.jpg") no-repeat scroll 50% 0 $purple;
+  margin-top: 10px;
 }
 
 .inline {
@@ -26,9 +25,29 @@ body{
   box-shadow:0px 0px 5px #666666;
 }
 
-.alert{
+img {
+ @extend .imgshadow;
 }
 
-.notice{
+.page-content{
+  @include grid-row(12);
+  padding: 10px 0px;
+  background: white;
+  border-radius: 5px;
+  border: 2px solid #3a233b;
+  .logo{
+    font-family: 'Stoke', serif;
+    font-size: 2em;
+    color: $purple;
+  }
+  .welcome{
+    color: $purple;
+    font-style: italic;
+    font-size: 0.8em;
+  }
 }
 
+.footer-content{
+  @extend .page-content;
+  margin-top: 10px;
+}
