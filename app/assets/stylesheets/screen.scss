@@ -25,12 +25,12 @@ body{
 .nopad {
   padding: 0px;
   padding-bottom: 30px;
-  box-shadow: 0px 0px 33px 1px rgba(0,0,0,0.3)
 }
 
 .main{
   min-height: 600px;
   background: $bg;
+  box-shadow: 0px 0px 33px 1px rgba(0,0,0,0.3)
 }
 
 .footer {
