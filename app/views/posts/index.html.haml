@@ -1,7 +1,9 @@
 .posts
-  .large-12.columns
+  .large-6.columns
     %h1 Sonrise Blog
-    %hr
+  .large-6.columns
+    = paginate @posts
+  %hr
   - @posts.each_with_index do |post, index|
     .large-12.columns
       - unless index == 0

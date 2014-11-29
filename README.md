@@ -1,15 +1,6 @@
-# Set Free by Jesus Church
+# Pagination theme for [Zurb Foundation](http://foundation.zurb.com)
 
-This is a simple website for Set Free by Jesus church
+With support for:
 
-http://setfreebyjesus.com
-
-Includes a simple home-made blog, admin panel, user authentication, and some CMS-type page elements to be managed by maintainer.
-
-### Setup
-
-    bundle
-
-    rake db:create db:migrate
-
-    rails s
+- erb
+- haml
