@@ -1,8 +1,6 @@
 .posts
-  .large-6.columns
+  .large-12.columns
     %h1 Sonrise Blog
-  .large-6.columns
-    = paginate @posts
   %hr
   - @posts.each_with_index do |post, index|
     .large-12.columns
@@ -19,3 +17,6 @@
         %h4= link_to post.name, post
         = link_to truncate(strip_tags(post.text), :length => 220, escape: false), post
 
+  .large-12.columns
+    %hr
+    = paginate @posts
