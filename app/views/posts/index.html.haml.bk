@@ -1,0 +1,20 @@
+.posts
+  %center
+    %h1.sonrise Sonrise Blog
+  %hr
+  - if current_admin
+    .large-12.columns
+      .pull-left.btn.btn-warning= link_to 'New Post', new_post_path
+  .large-12.columns
+    - @posts.each do |post|
+      %center
+        %h3#post_title= link_to post.name, post
+      = post.text.html_safe
+      %p
+      .hr
+      .post_footer= "Posted By: #{post.admin.username} | #{post.created_at.strftime("Published on %m/%d/%Y at %I:%M%p")}"
+      .hr
+  %br
+
+  %center
+    = paginate @posts

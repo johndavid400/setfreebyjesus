@@ -29,3 +29,4 @@ gem 'kaminari'
 
 gem 'foundation-rails'
 gem 'rails_12factor', group: :production
+gem 'rest_client'

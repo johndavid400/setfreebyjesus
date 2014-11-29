@@ -1,11 +1,12 @@
-.body_white.pad
+.posts
   %center
     %h1.purple= @post.name
 
-  .post.row
-    .span10.offset1
+  .post
+    .large-12.columns
       = @post.text.html_safe
       %p
+      .hr
       %center
         .post_footer= "Posted By: #{@post.admin.username} | #{@post.created_at.strftime("Published on %m/%d/%Y at %I:%M%p")}"
 
@@ -15,3 +16,4 @@
     = link_to 'Edit', edit_post_path(@post)
     %p
     = link_to 'New Post', new_post_path
+

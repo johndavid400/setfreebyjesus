@@ -1,20 +1,19 @@
-.body_white.pad
-  %center
-    %h1.sonrise Sonrise Blog
-  %hr
-  - if current_admin
-    .row
-      .row10.offset1
-        .pull-left.btn.btn-warning= link_to 'New Post', new_post_path
-  .row
-    .span10.offset1
-      - @posts.each do |post|
-        %center
-          %h3#post_title= link_to post.name, post
-        = post.text.html_safe
-        %p
-        .post_footer= "Posted By: #{post.admin.username} | #{post.created_at.strftime("Published on %m/%d/%Y at %I:%M%p")}"
-  %br
+.posts
+  .large-12.columns
+    %h1 Sonrise Blog
+    %hr
+  - @posts.each_with_index do |post, index|
+    .large-12.columns
+      - unless index == 0
+        %hr
+    .large-1.small-2.columns
+      .circle
+        .date
+          .day= link_to post.created_at.strftime("%e"), post
+          .month= link_to post.created_at.strftime("%^b"), post
+          .year= link_to post.created_at.strftime("%y"), post
+    .large-11.small-10.columns
+      .blog-post-title
+        %h4= link_to post.name, post
+        = link_to truncate(strip_tags(post.text), :length => 220, escape: false), post
 
-  %center
-    = paginate @posts

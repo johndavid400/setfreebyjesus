@@ -6,20 +6,24 @@ $gray: gray;
 $light-gray: #f6f4fa;
 $yellow: #fed832;
 $purple: #aa7bfc;
+$light-blue: $purple;
 $top: $white;
 $bottom: $purple;
 $bg: $light-gray;
 
 body{
+  background: $purple;
   background-image: linear-gradient(bottom, $bottom 50%, $top 50%);
   background-image: -o-linear-gradient(bottom, $bottom 50%, $top 50%);
   background-image: -moz-linear-gradient(bottom, $bottom 50%, $top 50%);
   background-image: -webkit-linear-gradient(bottom, $bottom 50%, $top 50%);
   background-image: -ms-linear-gradient(bottom, $bottom 50%, $top 50%);
+  background-repeat: no-repeat;
 }
 
 .nopad {
   padding: 0px;
+  padding-bottom: 30px;
 }
 
 .main{
@@ -113,3 +117,34 @@ body{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a8cb6', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
+.circle{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background: $light-blue;
+  padding: 0px;
+  color: $white;
+  a{
+    color: $white !important;
+  }
+  .date{
+    position: relative;
+    top: 5px;
+    text-align: center;
+    .day{
+      font-size: 0.9em;
+    }
+    .month{
+      font-size: 1.2em;
+      margin: -6px;
+    }
+    .year{
+      font-size: 0.9em;
+    }
+  }
+  .blog{
+    position: relative;
+    top: 23px;
+    text-align: center;
+  }
+}
