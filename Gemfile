@@ -28,3 +28,4 @@ gem "htmlentities"
 gem 'kaminari'
 
 gem 'foundation-rails'
+gem 'rails_12factor', group: :production
