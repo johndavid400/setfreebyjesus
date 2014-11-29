@@ -9,10 +9,15 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="row">
+    <div class="row main">
       <div class="large-12 columns">
         <%= render 'layouts/nav' %>
         <%= yield %>
+      </div>
+    </div>
+    <div class="row footer">
+      <div class="large-12 columns">
+        <%= render 'layouts/footer' %>
       </div>
     </div>
     <%= javascript_include_tag "application" %>

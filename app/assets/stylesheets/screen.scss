@@ -4,6 +4,26 @@ $white: #ffffff;
 $black: #000000;
 $gray: gray;
 $yellow: #fed832;
+$purple: #aa7bfc;
+$top: $white;
+$bottom: $purple;
+
+body{
+  background-image: linear-gradient(bottom, $bottom 50%, $top 50%);
+  background-image: -o-linear-gradient(bottom, $bottom 50%, $top 50%);
+  background-image: -moz-linear-gradient(bottom, $bottom 50%, $top 50%);
+  background-image: -webkit-linear-gradient(bottom, $bottom 50%, $top 50%);
+  background-image: -ms-linear-gradient(bottom, $bottom 50%, $top 50%);
+}
+
+.main{
+  min-height: 600px;
+  background: $white;
+}
+
+.footer {
+  font-size: 0.7em;
+}
 
 .hr {
   width: 100%;
