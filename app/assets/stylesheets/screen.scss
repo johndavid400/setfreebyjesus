@@ -6,7 +6,8 @@ $gray: gray;
 $light-gray: #f6f4fa;
 $yellow: #fed832;
 $purple: #aa7bfc;
-$light-blue: $purple;
+$dark-purple: #752fef;
+$light-blue: rgba(170, 123, 252, 0.7);
 $top: $white;
 $bottom: $purple;
 $bg: $light-gray;
@@ -24,6 +25,7 @@ body{
 .nopad {
   padding: 0px;
   padding-bottom: 30px;
+  box-shadow: 0px 0px 33px 1px rgba(0,0,0,0.3)
 }
 
 .main{
@@ -34,6 +36,12 @@ body{
 .footer {
   font-size: 0.7em;
   margin-top: 5px;
+}
+
+.title-area {
+  img {
+    padding: 4px;
+  }
 }
 
 .contact-heading, .contact-form {
@@ -118,6 +126,7 @@ body{
 }
 
 .circle{
+  margin-top: 5px;
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -146,5 +155,16 @@ body{
     position: relative;
     top: 23px;
     text-align: center;
+  }
+}
+
+.blog-post-title {
+  margin-left: 10px;
+}
+
+ul.pagination li.current a{
+  background: $dark-purple;
+  &:hover {
+    background: $purple;
   }
 }

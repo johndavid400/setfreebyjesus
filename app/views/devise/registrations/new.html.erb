@@ -1,4 +1,4 @@
-<div class="devise">
+<div class="large-12 columns">
   <h2>Sign up</h2>
 
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
@@ -13,7 +13,7 @@
     <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %></div>
 
-    <div><%= f.submit "Sign up" %></div>
+  <div><%= f.submit "Sign up", :class => "button tiny" %></div>
   <% end %>
 
   <%= render "devise/shared/links" %>
