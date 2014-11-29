@@ -5,13 +5,39 @@
 // or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
 //
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// the compiled file.
+// compiled file.
 //
-// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
-// GO AFTER THE REQUIRES BELOW.
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// about supported directives.
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
-//= require ckeditor-jquery
+//= require foundation
 //= require_tree .
+
+$(function(){ $(document).foundation(); });
+
+$(document).ready(function(){
+  $(".text").click(function(){
+    if ($(this).hasClass("one")){
+      hideAll();
+      $("#one").fadeIn(); 
+      $(".one").css("border", "2px solid #fed832")
+    }
+    if ($(this).hasClass("two")){
+      hideAll();
+      $("#two").fadeIn(); 
+      $(".two").css("border", "2px solid #fed832")
+    }
+    if ($(this).hasClass("three")){
+      hideAll();
+      $("#three").fadeIn(); 
+      $(".three").css("border", "2px solid #fed832")
+    }
+  });
+});
+function hideAll(){
+  $("#one, #two, #three").hide(); 
+  $(".one, .two, .three").css("border", "none")
+}
+

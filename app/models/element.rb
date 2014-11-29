@@ -1,3 +1,3 @@
 class Element < ActiveRecord::Base
-  attr_accessible :body, :title
+#  attr_accessible :body, :title
 end

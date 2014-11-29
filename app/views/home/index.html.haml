@@ -1,31 +1,19 @@
 .row
-  .span12
-    = render 'slider'
-.row
-  .span8
-    .box.pad_left
-      .row
-        %center
-          %h1.title Welcome
-        .span5
-          .inner_box
-            = render 'welcome'
-        .span2
-          = image_tag('pastors.png', :class => "imgshadow")
+  .large-4.columns.hero-text
+    .text.one
+      Daily prophetic word from the Lord specifically for you!
+    .text.two
+      We have FIVE books availableto help build your faith!
+    .text.three
+      Consider becoming a partnertoday and support the ministry!
+  .large-8.columns.hero-image
+    .images
+      #one
+        = image_tag("1.png")
+      #two
+        = image_tag("2.png")
+      #three
+        = image_tag("3.png")
 
-  .span4
-    .box.pad_right
-      .row
-        .span4
-          %center
-            .inner_box.top= render 'shared/login'
-          %br
-          .inner_box.bottom#worship_times= render 'shared/worship_times'
+.hr
 
-.row.spacer
-  .span12
-    .box.pad_left.pad_right
-      %center
-        %h1.title Coming Attractions
-      .box.pad
-        = render 'coming_attractions'

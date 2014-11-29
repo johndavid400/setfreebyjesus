@@ -4,7 +4,8 @@
     = image_tag("2.jpg")
     = image_tag("3.jpg")
 
-:javascript
-  $(window).load(function() {
-    $('#slider').nivoSlider();
-  });
+= content_for :javascripts do
+  :javascript
+    $(window).load(function() {
+      $('#slider').nivoSlider();
+    });

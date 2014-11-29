@@ -1,26 +1,25 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.1.6'
+# Use postgresql as the database for Active Record
 gem 'pg'
-
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'therubyracer'
-  gem 'execjs'
-end
-
-group :test do
-  gem 'cucumber-rails'
-  gem 'rspec'
-  gem 'debugger'
-end
-
-gem 'devise'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.3'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+# Use jquery as the JavaScript library
 gem 'jquery-rails'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.0'
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', '~> 0.4.0',          group: :doc
+
+gem 'pry'
+gem 'devise'
 gem 'haml-rails'
-gem 'bootstrap-sass'
 gem 'rails_admin'
 gem 'ckeditor_rails', :require => 'ckeditor-rails'
 gem 'truncate_html'
@@ -28,4 +27,4 @@ gem "nokogiri"
 gem "htmlentities"
 gem 'kaminari'
 
-
+gem 'foundation-rails'

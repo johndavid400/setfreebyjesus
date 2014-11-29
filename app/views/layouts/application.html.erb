@@ -1,90 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Set Free by Jesus</title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= content_for?(:title) ? yield(:title) : "Set Free by Jesus" %></title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
-
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35436115-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-
   </head>
   <body>
-    <div class="page">
-      <div class="container main">
-
-        <%= render 'shared/navbar' %>
-
-        <div class="row special">
-          <div class="span12">
-            <div class="row">
-              <div class="span6 offset5">
-                <div class="scripture pull-right"><%= render 'shared/header_text' %></div>
-              </div>
-              <div class="span1">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      <div class="body_white">
-          <% if notice %>
-            <p class="notice alert-message info"><%= notice %></p>
-          <% end %>
-          <% if alert %>
-            <p class="alert alert-message warning"><%= alert %></p>
-          <% end %>
-          <%= yield %>
-        <center>
-          <div class="row">
-            <br class="clear">
-
-            <div class="span6">
-              <div class="box pad_left">
-                <h3><div class="title">Latest Discussions</div></h3>
-                <%= render 'shared/discussion' %>
-              </div>
-            </div>
-
-            <div class="span6">
-              <div class="bottom top box pad_right">
-                <h3><div class="title">Sonrise Blog</div></h3>
-                <%= render 'shared/recent_posts' %>
-              </div>
-            </div>
-
-            <div class="row footer">
-              <div class="span4">
-                <%= link_to image_tag('church.png', :class => "imgshadow"), root_path %>
-              </div>
-              <div class="span4">
-                <%= link_to image_tag('blogd.png', :class => "imgshadow"), posts_path %>
-              </div>
-              <div class="span4">
-                <%= link_to image_tag('register.jpg', :class => "imgshadow"), new_user_registration_path %>
-              </div>
-            </div>
-
-          </div>
-        </center>
-
-        <div class="row">
-          <%= render 'shared/footer' %>
-        </div>
-
-      </div>
-
+    <div class="row">
+      <div class="large-12 columns">
+        <%= render 'layouts/nav' %>
+        <%= yield %>
       </div>
     </div>
-
+    <%= javascript_include_tag "application" %>
+    <%= yield :javascripts %>
   </body>
 </html>
