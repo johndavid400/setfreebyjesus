@@ -17,7 +17,13 @@ class HomeController < ApplicationController
 
   def contact
     @page_content = Element.find_by_page("Contact")
-    render 'page_content'
+    # render 'page_content'
+  end
+
+  def message
+    # TODO send message or something here
+    flash[:notice] = "Your message was successfully delivered"
+    redirect_to root_path
   end
 
   def donations

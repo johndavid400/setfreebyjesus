@@ -9,13 +9,13 @@
   %section.top-bar-section
     %ul.right
 
-      %li= link_to "Home", "#"
+      %li= link_to "Home", root_path
       %li= link_to "About Us", "#"
       %li= link_to "Son-Rise Blog", "#"
       %li= link_to "Ministries", "#"
       %li= link_to "Prouducts", "#"
       %li= link_to "Support", "#"
-      %li= link_to "Contact", "#"
+      %li= link_to "Contact", home_contact_path
 
       - if current_user
         %li= link_to 'Sign Out', destroy_user_session_path, :method => :delete

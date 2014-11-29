@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "home/index"
   get "home/about"
   get "home/contact"
+  post "contact" => "home#message"
   get "home/invite"
   get "home/donations"
   get "home/ministries"

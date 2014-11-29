@@ -3,10 +3,12 @@
 $white: #ffffff;
 $black: #000000;
 $gray: gray;
+$light-gray: #f6f4fa;
 $yellow: #fed832;
 $purple: #aa7bfc;
 $top: $white;
 $bottom: $purple;
+$bg: $light-gray;
 
 body{
   background-image: linear-gradient(bottom, $bottom 50%, $top 50%);
@@ -16,13 +18,30 @@ body{
   background-image: -ms-linear-gradient(bottom, $bottom 50%, $top 50%);
 }
 
+.nopad {
+  padding: 0px;
+}
+
 .main{
   min-height: 600px;
-  background: $white;
+  background: $bg;
 }
 
 .footer {
   font-size: 0.7em;
+  margin-top: 5px;
+}
+
+.contact-heading, .contact-form {
+  @include grid-column($columns: 6);
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.center{
+  text-align: center;
 }
 
 .hr {
@@ -62,8 +81,8 @@ body{
 }
 
 .text {
-  height: 92px;
-  padding: 10px;
+  height: 95px;
+  padding: 15px;
   @extend .text-gradient;
 }
 

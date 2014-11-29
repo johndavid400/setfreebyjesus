@@ -1,0 +1,19 @@
+.contact-heading
+  %h4 Contact Us
+.contact-form
+  = form_tag contact_path do
+    .row
+      .large-12.columns
+        = label_tag "Name *"
+        = text_field_tag "contact[name]"
+      .large-12.columns
+        = label_tag "Email *"
+        = email_field_tag "contact[email]"
+      .large-12.columns
+        = label_tag "Subject *"
+        = text_field_tag "contact[subject]"
+      .large-12.columns
+        = label_tag "Message *"
+        = text_area_tag "contact[message]", nil, :rows => 5 
+      .large-12.columns
+        = submit_tag "Submit", :class => "button secondary tiny"

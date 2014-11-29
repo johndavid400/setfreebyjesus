@@ -18,6 +18,10 @@
 $(function(){ $(document).foundation(); });
 
 $(document).ready(function(){
+  $(".alert-box").slideUp(6000);
+});
+
+$(document).ready(function(){
   $(".text").click(function(){
     if ($(this).hasClass("one")){
       hideAll();
