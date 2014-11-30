@@ -1,6 +1,8 @@
 .posts
-  %center
-    %h1.purple= @post.name
+  .large-12.columns
+    %h1= link_to "Sonrise Blog", posts_path
+  %hr
+  %h1.purple= @post.name
 
   .post
     .large-12.columns

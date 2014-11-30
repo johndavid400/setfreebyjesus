@@ -22,6 +22,12 @@ body{
   background-repeat: no-repeat;
 }
 
+h1, h2, h3, h4, h5 {
+  a {
+    color: $black;
+  }
+}
+
 .nopad {
   padding: 0px;
   padding-bottom: 30px;
@@ -34,8 +40,9 @@ body{
 }
 
 .footer {
-  font-size: 0.7em;
-  margin-top: 5px;
+  font-size: 0.8em;
+  margin-top: 35px;
+  margin-bottom: 85px;
 }
 
 .title-area {
@@ -160,6 +167,12 @@ body{
 
 .blog-post-title {
   margin-left: 10px;
+  a {
+    color: $gray;
+  }
+  h4 a {
+    color: $black;
+  }
 }
 
 ul.pagination li.current a{
@@ -168,3 +181,18 @@ ul.pagination li.current a{
     background: $purple;
   }
 }
+
+.about_us {
+  @include grid-column($columns: 12);
+  margin: 10px 15px 30px 15px;
+  .image {
+    //position: absolute;
+    //right: 0;
+    float: right;
+    margin: 10px;
+  }
+  .block {
+    margin-top: 20px;
+  }
+}
+

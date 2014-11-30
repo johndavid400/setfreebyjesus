@@ -10,11 +10,11 @@
     %ul.right
 
       %li= link_to "Home", root_path
-      %li= link_to "About Us", "#"
+      %li= link_to "About Us", home_about_us_path
       %li= link_to "Son-Rise Blog", posts_path
-      %li= link_to "Ministries", "#"
-      %li= link_to "Products", "#"
-      %li= link_to "Support", "#"
+      %li= link_to "Ministries", home_ministries_path
+      %li= link_to "Products", home_products_path
+      %li= link_to "Support", home_support_path
       %li= link_to "Contact", home_contact_path
 
       - if current_user

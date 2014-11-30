@@ -10,14 +10,17 @@ Rails.application.routes.draw do
 
   get "home/index"
   get "home/about"
+  get "home/about_us"
   get "home/contact"
   post "contact" => "home#message"
   get "home/invite"
-  get "home/donations"
   get "home/ministries"
   get "home/founders"
   get "home/orphanage"
   get "home/page_content"
+  get "home/support"
+  get "home/products"
+  get "home/donations"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
