@@ -11,11 +11,21 @@
     = f.text_field :name
   .field
     = f.label :text
-    = f.text_area :text, :class => "ckeditor"
+    = f.text_area :text, :class => "ckeditor", :rows => 10
   .field
     = f.hidden_field :admin_id
   .field
     = f.label :created_at
-    = f.datetime_select :created_at
+    = f.text_field :created_at, value: @post.created_at_time
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', :class => "button tiny"
+
+= content_for :javascripts do
+  :javascript
+    $(function() {
+      $('#post_created_at').datepicker({
+        dateFormat: "mm/dd/y",
+        changeMonth: true,
+        changeYear: true
+      });
+    });

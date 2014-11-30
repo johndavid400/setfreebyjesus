@@ -6,4 +6,10 @@ class Post < ActiveRecord::Base
   def username
   end
 
+  def created_at_time
+    created_at.strftime("%D")
+  rescue
+    Date.today.strftime("%D")
+  end
+
 end

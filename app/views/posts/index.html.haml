@@ -1,6 +1,6 @@
 .posts
   .large-12.columns
-    %h1 Sonrise Blog
+    %h3 Sonrise Blog
   %hr
   - @posts.each_with_index do |post, index|
     .large-12.columns
@@ -14,7 +14,7 @@
           .year= link_to post.created_at.strftime("%y"), post
     .large-11.small-10.columns
       .blog-post-title
-        %h4= link_to post.name, post
+        %h5= link_to post.name, post
         = link_to truncate(strip_tags(post.text), :length => 220, escape: false), post
 
   .large-12.columns

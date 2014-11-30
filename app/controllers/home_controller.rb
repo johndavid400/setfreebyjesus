@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+
   def index
     @welcome_elements = Element.select{|s| s.page == "Home" && s.section == "Welcome"}
     @attractions_elements = Element.select{|s| s.page == "Home" && s.section == "Attractions"}
@@ -6,17 +7,17 @@ class HomeController < ApplicationController
   end
 
   def about
-    @page_content = Element.find_by_page("About")
-    render 'page_content'
+    @page_content = Element.find_by(page: "About")
+    # render 'page_content'
   end
 
   def ministries
-    @page_content = Element.find_by_page("Ministries")
-    #    render 'page_content'
+    @page_content = Element.find_by(page: "Ministries")
+    # render 'page_content'
   end
 
   def contact
-    @page_content = Element.find_by_page("Contact")
+    @page_content = Element.find_by(page: "Contact")
     # render 'page_content'
   end
 
@@ -27,8 +28,8 @@ class HomeController < ApplicationController
   end
 
   def donations
-    @page_content = Element.find_by_page("Donations")
-    render 'page_content'
+    @page_content = Element.find_by(page: "Donations")
+    # render 'page_content'
   end
 
   def page_content
