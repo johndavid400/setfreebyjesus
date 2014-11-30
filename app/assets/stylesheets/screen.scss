@@ -182,17 +182,28 @@ ul.pagination li.current a{
   }
 }
 
-.about_us {
+.page {
   @include grid-column($columns: 12);
-  margin: 10px 15px 30px 15px;
-  .image {
-    //position: absolute;
-    //right: 0;
-    float: right;
-    margin: 10px;
-  }
+  margin: 10px 0px 30px 0px;
+  padding: 0px 30px;
   .block {
     margin-top: 20px;
   }
+}
+
+.about_us {
+  @extend .page;
+  .image {
+    float: right;
+    margin: 10px;
+  }
+}
+
+.ministries {
+  @extend .page;
+}
+
+.support {
+  @extend .page;
 }
 

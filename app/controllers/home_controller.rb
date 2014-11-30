@@ -12,7 +12,7 @@ class HomeController < ApplicationController
 
   def ministries
     @page_content = Element.find_by_page("Ministries")
-    render 'page_content'
+    #    render 'page_content'
   end
 
   def contact
