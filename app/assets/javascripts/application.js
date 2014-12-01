@@ -19,30 +19,45 @@
 $(function(){ $(document).foundation(); });
 
 $(document).ready(function(){
-  $(".alert-box").slideUp(6000);
-});
-
-$(document).ready(function(){
   $(".text").click(function(){
     if ($(this).hasClass("one")){
       hideAll();
-      $("#one").fadeIn(); 
+      $("#one").fadeIn();
       $(".one").css("border", "2px solid #fed832")
     }
     if ($(this).hasClass("two")){
       hideAll();
-      $("#two").fadeIn(); 
+      $("#two").fadeIn();
       $(".two").css("border", "2px solid #fed832")
     }
     if ($(this).hasClass("three")){
       hideAll();
-      $("#three").fadeIn(); 
+      $("#three").fadeIn();
       $(".three").css("border", "2px solid #fed832")
     }
   });
 });
+
 function hideAll(){
-  $("#one, #two, #three").hide(); 
+  $("#one, #two, #three").hide();
   $(".one, .two, .three").css("border", "none")
+}
+
+var counter = 0;
+var ids = ["one", "two", "three"];
+$(document).ready(function(){
+  setInterval(function(){
+    console.log(counter);
+    changeToSlide("two");
+  }, 5000);
+});
+
+function changeToSlide(slide){
+  $("#" + ids[counter]).fadeOut(function() {
+    ++counter;
+    hideAll();
+    $("#" + ids[counter]).show();
+    $("." + ids[counter]).css("border", "2px solid #fed832")
+  });
 }
 
