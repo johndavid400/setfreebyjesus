@@ -47,12 +47,13 @@ var counter = 0;
 var ids = ["one", "two", "three"];
 $(document).ready(function(){
   setInterval(function(){
-    console.log(counter);
-    changeToSlide("two");
+    if ($(".hero-text").find(".text:hover").length == 0 && $(".images").find(".image:hover").length == 0){
+      nextSlide();
+    }
   }, 5000);
 });
 
-function changeToSlide(slide){
+function nextSlide(){
   $("#" + ids[counter]).fadeOut(function() {
     if (counter >= 2){
       counter = 0;
