@@ -54,7 +54,12 @@ $(document).ready(function(){
 
 function changeToSlide(slide){
   $("#" + ids[counter]).fadeOut(function() {
-    ++counter;
+    if (counter >= 2){
+      counter = 0;
+    }
+    else{
+      ++counter;
+    }
     hideAll();
     $("#" + ids[counter]).show();
     $("." + ids[counter]).css("border", "2px solid #fed832")
