@@ -61,7 +61,7 @@ function changeToSlide(slide){
       ++counter;
     }
     hideAll();
-    $("#" + ids[counter]).show();
+    $("#" + ids[counter]).fadeIn();
     $("." + ids[counter]).css("border", "2px solid #fed832")
   });
 }
