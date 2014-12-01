@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get "home/support"
   get "home/products"
   get "home/donations"
-  get "home/testimonials"
+  get "home/testimonies"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
