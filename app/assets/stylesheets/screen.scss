@@ -104,10 +104,56 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+.top-bar.expanded {
+  height: auto;
+  background: $white;
+  .toggle-topbar{
+    a {
+      color: $white;
+    }
+  }
+  .toggle-topbar.menu-icon{
+    margin-top: -53px;
+  }
+  .top-bar-section {
+    ul {
+      position: relative;
+      top: 0px;
+      li {
+        background: transparent;
+        border-top: 1px solid $gray;
+        a {
+          font-size: 1.0em;
+          background: transparent !important;
+          color: $black;
+          &:hover {
+            color: $gray;
+          }
+        }
+        &:hover {
+          background: $yellow;
+          color: $white;
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+.top-bar.expanded .title-area {
+  height: 120px;
+  background: $white;
+  @extend .purple-gradient;
+}
+
 .text {
   height: 95px;
   padding: 15px;
   @extend .text-gradient;
+  a {
+    color: $black;
+  }
 }
 
 .images{
