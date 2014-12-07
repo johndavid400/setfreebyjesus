@@ -18,52 +18,9 @@
 
 $(function(){ $(document).foundation(); });
 
-$(document).ready(function(){
-  $(".text").click(function(){
-    if ($(this).hasClass("one")){
-      hideAll();
-      $("#one").fadeIn();
-      $(".one").css("border", "2px solid #fed832")
-    }
-    if ($(this).hasClass("two")){
-      hideAll();
-      $("#two").fadeIn();
-      $(".two").css("border", "2px solid #fed832")
-    }
-    if ($(this).hasClass("three")){
-      hideAll();
-      $("#three").fadeIn();
-      $(".three").css("border", "2px solid #fed832")
-    }
-  });
+$(".images").slick({
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 6000,
+  speed: 500
 });
-
-function hideAll(){
-  $("#one, #two, #three").hide();
-  $(".one, .two, .three").css("border", "none")
-}
-
-var counter = 0;
-var ids = ["one", "two", "three"];
-$(document).ready(function(){
-  setInterval(function(){
-    if ($(".hero-text").find(".text:hover").length == 0 && $(".images").find(".image:hover").length == 0){
-      nextSlide();
-    }
-  }, 5000);
-});
-
-function nextSlide(){
-  $("#" + ids[counter]).fadeOut(function() {
-    if (counter >= 2){
-      counter = 0;
-    }
-    else{
-      ++counter;
-    }
-    hideAll();
-    $("#" + ids[counter]).fadeIn();
-    $("." + ids[counter]).css("border", "2px solid #fed832")
-  });
-}
-
