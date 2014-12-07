@@ -2,9 +2,9 @@
   .text.one
     = link_to "Daily prophetic word from the Lord specifically for you!", posts_path
   .text.two
-    = link_to "We have FIVE books available to help build your faith!", home_support_path
+    = link_to "We have FIVE books available to help build your faith!", home_products_path
   .text.three
-    = link_to "Consider becoming a partner today and support the ministry!", home_products_path
+    = link_to "Consider becoming a partner today and support the ministry!", home_support_path
 .large-8.columns.hero-image
   .images
     .image
@@ -20,8 +20,8 @@
       window.location = "#{posts_path}";
     });
     $(".two").click(function(){
-      window.location = "#{home_support_path}";
+      window.location = "#{home_products_path}";
     });
     $(".three").click(function(){
-      window.location = "#{home_products_path}";
+      window.location = "#{home_support_path}";
     });

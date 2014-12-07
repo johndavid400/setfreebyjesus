@@ -265,3 +265,10 @@ ul.pagination li.current a{
   @extend .page;
 }
 
+@media (max-width: 640px) {
+  .about_us {
+    .image{
+      float: none;
+    }
+  }
+}
