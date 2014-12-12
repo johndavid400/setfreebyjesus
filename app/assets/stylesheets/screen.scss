@@ -33,6 +33,14 @@ h1, h2, h3, h4, h5, h6 {
   @extend .radius;
 }
 
+.purple {
+  margin-top: 50px;
+  background: $purple;
+  &:hover {
+    background: $dark-purple;
+  }
+}
+
 .nopad {
   padding: 0px;
   padding-bottom: 30px;
