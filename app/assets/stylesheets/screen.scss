@@ -183,39 +183,6 @@ h1, h2, h3, h4, h5, h6 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a8cb6', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
-.circle{
-  margin-top: 5px;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  background: $light-blue;
-  padding: 0px;
-  color: $white;
-  a{
-    color: $white !important;
-  }
-  .date{
-    position: relative;
-    top: 5px;
-    text-align: center;
-    .day{
-      font-size: 0.9em;
-    }
-    .month{
-      font-size: 1.2em;
-      margin: -6px;
-    }
-    .year{
-      font-size: 0.9em;
-    }
-  }
-  .blog{
-    position: relative;
-    top: 23px;
-    text-align: center;
-  }
-}
-
 .blog-post-title {
   margin-left: 10px;
   a {
@@ -272,3 +239,60 @@ ul.pagination li.current a{
     }
   }
 }
+
+@media (min-width: 1024px){
+  .circle{
+    margin-top: 5px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: $light-blue;
+    padding: 0px;
+    color: $white;
+    a{
+      color: $white !important;
+    }
+    .date{
+      position: relative;
+      top: 5px;
+      text-align: center;
+      .day{
+        font-size: 0.9em;
+      }
+      .month{
+        font-size: 1.2em;
+        margin: -6px;
+      }
+      .year{
+        font-size: 0.9em;
+      }
+    }
+    .blog{
+      position: relative;
+      top: 23px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  .circle{
+    margin-top: 0px;
+    padding: 0px;
+    background: $light-blue;
+    border-radius: 3px;
+    width: 100%;
+    padding: 3px 15px;
+    margin-bottom: 20px;
+    a{
+      color: $white !important;
+    }
+    .date{
+      .day, .month, .year {
+        display: inline;
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+

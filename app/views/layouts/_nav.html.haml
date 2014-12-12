@@ -2,13 +2,13 @@
   %ul.title-area
     %li.name
       %h1
-        = image_tag("logo.png")
+        = link_to image_tag("logo.png"), root_path
     %li.toggle-topbar.menu-icon
       %a{:href => "#"}
         %span Menu
   %section.top-bar-section
     %ul.right
-      %li= link_to "Home", root_path
+      %li= link_to "Home", root_path, :class => "hide-for-medium-down"
       %li= link_to "About Us", home_about_us_path
       %li= link_to "Son-Rise Blog", posts_path
       %li= link_to "Ministries", home_ministries_path
