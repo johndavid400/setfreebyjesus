@@ -8,13 +8,18 @@
     .large-12.columns
       - unless index == 0
         %hr
-    .large-1.small-2.columns
+    .large-1.columns
       .circle
         .date
-          .day= link_to post.created_at.strftime("%e"), post
-          .month= link_to post.created_at.strftime("%^b"), post
-          .year= link_to post.created_at.strftime("%y"), post
-    .large-11.small-10.columns
+          .show-for-large-up
+            .day= link_to post.created_at.strftime("%e"), post
+            .month= link_to post.created_at.strftime("%^b"), post
+            .year= link_to post.created_at.strftime("%y"), post
+          .hide-for-large-up
+            = link_to post.created_at.strftime("%B"), post
+            = link_to "#{post.created_at.strftime("%e")},", post
+            = link_to post.created_at.strftime("%Y"), post
+    .large-11.columns
       .blog-post-title
         %h5= link_to post.name, post
         = link_to truncate(strip_tags(post.text), :length => 220, escape: false), post
