@@ -48,6 +48,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.8em;
   margin-top: 35px;
   margin-bottom: 85px;
+  a {
+    color: $black;
+  }
 }
 
 .title-area {
@@ -57,7 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-heading, .contact-form {
-  @include grid-column($columns: 6);
+  @extend .large-6;
+  @extend .columns;
 }
 
 .contact-form {
