@@ -279,6 +279,23 @@ ul.pagination li.current a{
   }
 }
 
+.slick-track {
+  .slick-slide {
+    a {
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 641px) and (max-width: 783px){
+    .top-bar{
+      height: 160px !important;
+    }
+}
+
 @media (max-width: 1024px){
   .circle{
     margin-top: 0px;
