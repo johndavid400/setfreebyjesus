@@ -41,6 +41,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.purple-header {
+  background: $purple;
+  color: $white;
+  padding-left: 10px;
+  //margin-left: -5px;
+  //margin-right: -5px;
+}
+
+.pad-left {
+  margin-left: 10px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
 .nopad {
   padding: 0px;
   padding-bottom: 30px;

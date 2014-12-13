@@ -11,16 +11,14 @@
     .large-1.columns
       .circle
         .date
-          .show-for-large-up
-            .ppw
+          .ppw
+            .show-for-large-up
               = "#{params[:page].present? ? params[:page] : 1}-#{index + 1}"
-          .hide-for-large-up
-            = link_to post.created_at.strftime("%B"), post
-            = link_to "#{post.created_at.strftime("%e")},", post
-            = link_to post.created_at.strftime("%Y"), post
+            .hide-for-large-up
+              %span.bold= link_to "#{params[:page].present? ? params[:page] : 1} - #{index + 1} : ", post
+              %span.pad-left= link_to post.name, post
     .large-11.columns
       .blog-post-title
-        %h5= link_to post.name, post
         = link_to truncate(strip_tags(post.text), :length => 220, escape: false), post
 
   .large-12.columns

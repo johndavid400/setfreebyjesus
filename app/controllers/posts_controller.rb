@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.order("created_at DESC").page params[:page]
+    @posts = Post.order("created_at ASC").page params[:page]
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
