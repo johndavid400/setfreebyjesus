@@ -2,8 +2,8 @@
   .large-12.columns
     = render 'content'
   .large-12.columns
-    %h3 Sonrise Blog
-  %hr
+    %h2 Son-Rise Blog
+    %hr
   - @posts.each_with_index do |post, index|
     .large-12.columns
       - unless index == 0
@@ -12,9 +12,8 @@
       .circle
         .date
           .show-for-large-up
-            .day= link_to post.created_at.strftime("%e"), post
-            .month= link_to post.created_at.strftime("%^b"), post
-            .year= link_to post.created_at.strftime("%y"), post
+            .ppw
+              = "#{params[:page].present? ? params[:page] : 1}-#{index + 1}"
           .hide-for-large-up
             = link_to post.created_at.strftime("%B"), post
             = link_to "#{post.created_at.strftime("%e")},", post
