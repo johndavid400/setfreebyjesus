@@ -19,6 +19,7 @@
               %span.pad-left= link_to post.name, post
     .large-11.columns
       .blog-post-title
+        .bold= link_to post.name, post
         = link_to truncate(strip_tags(post.text), :length => 220, escape: false), post
 
   .large-12.columns

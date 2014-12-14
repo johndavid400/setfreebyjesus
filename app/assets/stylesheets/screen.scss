@@ -62,6 +62,15 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 30px;
 }
 
+.products {
+  .block {
+    img {
+      margin-bottom: 20px;
+      height: 315px;
+    }
+  }
+}
+
 .main{
   min-height: 600px;
   background: $bg;
