@@ -11,12 +11,13 @@
     .large-1.columns
       .circle
         .date
-          .ppw
-            .show-for-large-up
-              = "#{params[:page].present? ? params[:page] : 1}-#{index + 1}"
-            .hide-for-large-up
-              %span.bold= link_to "#{params[:page].present? ? params[:page] : 1} - #{index + 1} : ", post
-              %span.pad-left= link_to post.name, post
+          .show-for-large-up
+            .day= link_to post.created_at.strftime("%e"), post
+            .month= link_to post.created_at.strftime("%^b"), post
+            .year= link_to post.created_at.strftime("%y"), post
+          .hide-for-large-up
+            %span.bold= link_to "#{params[:page].present? ? params[:page] : 1} - #{index + 1} : ", post
+            %span.pad-left= link_to post.name, post
     .large-11.columns
       .blog-post-title
         .bold= link_to post.name, post
