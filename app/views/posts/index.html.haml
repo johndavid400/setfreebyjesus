@@ -16,8 +16,9 @@
             .month= link_to post.created_at.strftime("%^b"), post
             .year= link_to post.created_at.strftime("%y"), post
           .hide-for-large-up
-            %span.bold= link_to "#{params[:page].present? ? params[:page] : 1} - #{index + 1} : ", post
-            %span.pad-left= link_to post.name, post
+            = link_to post.created_at.strftime("%B"), post
+            = link_to "#{post.created_at.strftime("%e")},", post
+            = link_to post.created_at.strftime("%Y"), post
     .large-11.columns
       .blog-post-title
         .bold= link_to post.name, post
