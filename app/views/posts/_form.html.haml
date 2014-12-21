@@ -13,8 +13,6 @@
     = f.label :text
     = f.text_area :text, :class => "ckeditor", :rows => 10
   .field
-    = f.hidden_field :admin_id
-  .field
     = f.label :created_at
     = f.text_field :created_at, value: @post.created_at_time
   .actions

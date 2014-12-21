@@ -54,7 +54,8 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:name, :text)
+    params[:post][:created_at] = Date.strptime(params[:post][:created_at], "%D")
+    params.require(:post).permit(:name, :text, :created_at)
   end
 
 end
