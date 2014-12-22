@@ -16,7 +16,7 @@
     = f.label :created_at
     = f.text_field :created_at, value: @post.created_at_time
   .actions
-    = f.submit 'Save', :class => "button tiny"
+    .right= f.submit 'Save', :class => "button yellow tiny"
 
 = content_for :javascripts do
   :javascript

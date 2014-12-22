@@ -1,21 +1,19 @@
 .posts
   .large-12.columns
-    %h3= link_to "Sonrise Blog", posts_path
-  %hr
-  %h4.purple-header= @post.name
+    %h2.left= link_to "Son-Rise Blog", posts_path
+    - if current_admin
+      .right.pad-left= link_to 'Edit', edit_post_path(@post), :class => "button yellow tiny"
+    .right= link_to 'Back', posts_path, :class => "button secondary tiny"
+  .row
+    .large-12.columns
+      %h4.purple-header= @post.name
 
   .post
     .large-12.columns
       = @post.text.html_safe
-      %p
-      .hr
-      %center
-        .post_footer= "Posted By: #{@post.admin.username} | #{@post.created_at.strftime("Published on %m/%d/%Y at %I:%M%p")}"
-
-  %br
-
-  - if current_admin
-    = link_to 'Edit', edit_post_path(@post)
-    %p
-    = link_to 'New Post', new_post_path
+    .row
+      .large-12.columns
+        %p.hr
+        %center
+          .post_footer= "Posted By: #{@post.admin.username} | #{@post.created_at.strftime("Published on %D")}"
 

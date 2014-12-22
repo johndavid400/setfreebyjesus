@@ -105,10 +105,22 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.yellow {
+  background: $yellow;
+  color: $black;
+  &:hover {
+    background: $purple;
+  }
+}
+
 .hr {
   width: 100%;
   border: 3px solid $yellow;
   margin: 9px 0px;
+}
+
+.field {
+  margin-top: 10px;
 }
 
 .hero-text{
@@ -228,6 +240,10 @@ h1, h2, h3, h4, h5, h6 {
   h5 a {
     color: $black;
   }
+}
+
+.post {
+  margin-top: 20px;
 }
 
 ul.pagination li.current a{
