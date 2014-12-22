@@ -5,7 +5,7 @@
   .large-12.columns
     %h2.left Son-Rise Blog
     - if current_admin
-      = link_to "New Post", new_post_path, :class => "button success right"
+      = link_to "New Post", new_post_path, :class => "button yellow right"
     %hr
   - @posts.each_with_index do |post, index|
     .large-12.columns
