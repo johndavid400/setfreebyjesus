@@ -20,6 +20,7 @@
 
 = content_for :javascripts do
   :javascript
+    CKEDITOR.replace('post_text');
     $(function() {
       $('#post_created_at').datepicker({
         dateFormat: "mm/dd/y",
