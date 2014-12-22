@@ -23,6 +23,7 @@ class HomeController < ApplicationController
 
   def message
     if params[:contact][:email].present?
+      Contact.create(contact_params)
       ContactMailer.submit_contact(params[:contact]).deliver
       flash[:notice] = "Your message was successfully delivered"
       redirect_to root_path
@@ -38,6 +39,12 @@ class HomeController < ApplicationController
   end
 
   def page_content
+  end
+
+  private
+
+  def contact_params
+    params.require(:contact).permit(:name, :email, :subject, :message)
   end
 
 end
