@@ -23,7 +23,7 @@ class HomeController < ApplicationController
 
   def message
     if params[:contact][:email].present?
-      ContactMailer.submit_contact(params[:contact]).deliver_later
+      ContactMailer.submit_contact(params[:contact]).deliver
       flash[:notice] = "Your message was successfully delivered"
       redirect_to root_path
     else
