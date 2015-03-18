@@ -3,6 +3,7 @@
     Copyright &#169; 2014. All Rights Reserved.
   .large-4.columns.center
     - if current_admin
+      = link_to "Content", admin_elements_path, :class => "button tiny secondary"
       = link_to "Admin Panel", rails_admin_path, :class => "button tiny yellow"
       = link_to "Sign Out", destroy_admin_session_path, :method => :delete, :class => "button tiny warning"
     - else

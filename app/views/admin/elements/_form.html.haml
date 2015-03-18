@@ -1,0 +1,24 @@
+.elements
+  = form_for ([:admin, @element]) do |f|
+    - if @element.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@element.errors.count, "error")
+          prohibited this item from being saved:
+        %ul
+          - @element.errors.full_messages.each do |msg|
+            %li= msg
+
+    .row
+      .large-12.columns
+        = f.label 'Title'
+        = f.text_field :title
+      .large-12.columns
+        = f.label 'Body'
+        = f.text_area :body, :class => "ckeditor"
+
+    .row
+      .large-12.columns
+        .spacer
+          .right= submit_tag "Update", :class => "button radius"
+          .left= link_to "Back", admin_elements_path, :class => "button radius secondary"

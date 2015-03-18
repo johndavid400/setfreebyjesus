@@ -1,0 +1,21 @@
+.row
+  .large-12.columns
+    .admin
+      %h1
+        %span#red Site Editor
+      %hr
+      %p
+      %table.table
+        %tr
+          %th Page
+          %th Section
+          %th Title
+          %th Actions
+        - @elements.each do |element|
+          %tr
+            %td= element.page
+            %td= element.section
+            %td= element.title
+            %td
+              = link_to 'Edit', edit_admin_element_path(element)
+

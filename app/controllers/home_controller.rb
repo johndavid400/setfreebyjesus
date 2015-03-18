@@ -1,24 +1,25 @@
 class HomeController < ApplicationController
+  before_filter :get_element
 
   def index
-    # @welcome_elements = Element.select{|s| s.page == "Home" && s.section == "Welcome"}
-    # @attractions_elements = Element.select{|s| s.page == "Home" && s.section == "Attractions"}
-    # @worship_times = Element.select{|s| s.page == "Home" && s.section == "Worship"}
   end
 
-  def about
-    # @page_content = Element.find_by(page: "About")
-    # render 'page_content'
-  end
-
-  def ministries
-    # @page_content = Element.find_by(page: "Ministries")
-    # render 'page_content'
+  def about_us
   end
 
   def contact
-    # @page_content = Element.find_by(page: "Contact")
-    # render 'page_content'
+  end
+
+  def ministries
+  end
+
+  def support
+  end
+
+  def products
+  end
+
+  def testimonials
   end
 
   def message
@@ -33,18 +34,14 @@ class HomeController < ApplicationController
     end
   end
 
-  def donations
-    # @page_content = Element.find_by(page: "Donations")
-    # render 'page_content'
-  end
-
-  def page_content
-  end
-
   private
 
   def contact_params
     params.require(:contact).permit(:name, :email, :subject, :message)
+  end
+
+  def get_element
+    @element = Element.find_or_create_by(page: params[:action])
   end
 
 end

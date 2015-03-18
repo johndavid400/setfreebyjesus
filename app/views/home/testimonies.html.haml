@@ -1,36 +1,43 @@
 .page
   %h5
-    %b Testimonies:
-  .block
-    We have had many testimonies of the Miracles of FAVOR that the Lord has done for our readers when they truly believed and totally EXPECTED His Prophetic Word to come to pass.  God is Faithful to perform all of His Words!  We have had over 100 reports of Favor-Miracles from readers!
-  .block
-    %ul
-      %li Yolanda (Texas)—“I took the 10-Day Challenge and saw many Favor-Miracles—much more that just 3... I'm gonna keep it up!”  P.S. She called back to say, "Now the Lord has given me a new car! WOW! FAVOR!"
+    - if @element && @element.title.present?
+      %b= @element.title.html_safe
+    - else
+      %b Testimonies:
 
-      %li Joy (Georgia)—"I took the 10-Day Challenge and saw many Favor-Miracles in the first ten days...healing, deliverance, finances, auto miracle, peace & joy at work, inspiration, clarity, voice of God... Thank you, Jesus!”
+  - if @element && @element.body.present?
+    = @element.body.html_safe
+  - else
+    .block
+      We have had many testimonies of the Miracles of FAVOR that the Lord has done for our readers when they truly believed and totally EXPECTED His Prophetic Word to come to pass.  God is Faithful to perform all of His Words!  We have had over 100 reports of Favor-Miracles from readers!
+    .block
+      %ul
+        %li Yolanda (Texas)—“I took the 10-Day Challenge and saw many Favor-Miracles—much more that just 3... I'm gonna keep it up!”  P.S. She called back to say, "Now the Lord has given me a new car! WOW! FAVOR!"
 
-      %li Michael (Iowa)—"I took the challenge and God has already blessed me, my family, my job, my move to a new city, new home... He is still showing me His Favor!"
+        %li Joy (Georgia)—"I took the 10-Day Challenge and saw many Favor-Miracles in the first ten days...healing, deliverance, finances, auto miracle, peace & joy at work, inspiration, clarity, voice of God... Thank you, Jesus!”
 
-      %li C.D. (Florida)—He believed, EXPECTED, and saw God do two huge financial Favor-Miracles for him!
+        %li Michael (Iowa)—"I took the challenge and God has already blessed me, my family, my job, my move to a new city, new home... He is still showing me His Favor!"
 
-      %li Alicia (Connecticut)—She was skeptical at first, but God showed her Favor-Miracles the very first day she tried it!
+        %li C.D. (Florida)—He believed, EXPECTED, and saw God do two huge financial Favor-Miracles for him!
 
-      %li D.C.W. (Alabama)—She believed, expected, and God gave her a new job and two Favor-Miracle promotions in short time!
+        %li Alicia (Connecticut)—She was skeptical at first, but God showed her Favor-Miracles the very first day she tried it!
 
-      %li David (Louisiana)—Says he has already seen many Favor-Miracles, but is still EXPECTING many more!
+        %li D.C.W. (Alabama)—She believed, expected, and God gave her a new job and two Favor-Miracle promotions in short time!
 
-      %li Apostle Charlie—Oral Surgery, originally quoted at $850 but discounted by doctor to $630. Insurance paid all but a $25 copay! Wow, a huge financial Favor-Miracle. (And NO Pain at all! A healing Favor-Miracle!)
+        %li David (Louisiana)—Says he has already seen many Favor-Miracles, but is still EXPECTING many more!
 
-      %li Apostle Charlie—Shoulder surgery, miracle, quick recovery, much quicker than the expected! Healed!
+        %li Apostle Charlie—Oral Surgery, originally quoted at $850 but discounted by doctor to $630. Insurance paid all but a $25 copay! Wow, a huge financial Favor-Miracle. (And NO Pain at all! A healing Favor-Miracle!)
 
-      %li Pastor Durinda—Ovarian surgery, cyst removed, totally benign, clean, healed! Huge healing Miracle! Only 9 days later, she flew to Korea and ministered daily in the CI Korea Prophetic Conference!
+        %li Apostle Charlie—Shoulder surgery, miracle, quick recovery, much quicker than the expected! Healed!
 
-      %li D.M. (email)—He took the 10-Day Challenge and received 3 huge financial favors very quickly: $300, $1,000, and $50! All gifts of FAVOR from the Lord!
+        %li Pastor Durinda—Ovarian surgery, cyst removed, totally benign, clean, healed! Huge healing Miracle! Only 9 days later, she flew to Korea and ministered daily in the CI Korea Prophetic Conference!
 
-      %li Businessman (Korea) —Said he has seen many financial Favor-Miracles since he took the Challenge!
+        %li D.M. (email)—He took the 10-Day Challenge and received 3 huge financial favors very quickly: $300, $1,000, and $50! All gifts of FAVOR from the Lord!
 
-      %li (Singapore)—Saw three wonderful "Favor-Miracles" very soon after he took the Challenge!
-  .block
-    There are many, many more testimonies of God's Miracles of Favor! Hundreds already... How about YOURS?
+        %li Businessman (Korea) —Said he has seen many financial Favor-Miracles since he took the Challenge!
+
+        %li (Singapore)—Saw three wonderful "Favor-Miracles" very soon after he took the Challenge!
+    .block
+      There are many, many more testimonies of God's Miracles of Favor! Hundreds already... How about YOURS?
 
   = link_to "Back", posts_path, :class => "button tiny purple"

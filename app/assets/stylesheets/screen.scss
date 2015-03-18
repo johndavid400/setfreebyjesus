@@ -28,9 +28,31 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+table {
+  width: 100%;
+}
+
+.admin {
+  padding: 20px;
+}
+
+
+.alert-box {
+  color: $black !important;
+  font-size: 1.2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  background: $yellow !important;
+}
+
 .button {
   @extend .tiny;
   @extend .radius;
+}
+
+.spacer {
+  margin-top: 30px;
 }
 
 .purple {
@@ -369,4 +391,5 @@ ul.pagination li.current a{
     }
   }
 }
+
 

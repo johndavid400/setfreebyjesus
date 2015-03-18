@@ -1,8 +1,15 @@
 .contact-heading
-  %h4 Contact Us
+  %h4
+    - if @element && @element.title.present?
+      = @element.title.html_safe
+    - else
+      Contact Us
   .row
     .large-10.columns
-      Please contact us for scheduling speaking arrangements, purchasing of books, or if you have any questions for Apostle Charlie or Dr. Durinda Warren and Set Free by Jesus Ministries.
+      - if @element && @element.body.present?
+        = @element.body.html_safe
+      - else
+        Please contact us for scheduling speaking arrangements, purchasing of books, or if you have any questions for Apostle Charlie or Dr. Durinda Warren and Set Free by Jesus Ministries.
 .contact-form
   = form_tag contact_path do
     .row
