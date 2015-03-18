@@ -2,7 +2,7 @@ class Admin::ElementsController < Admin::AdminController
   before_action :set_element, only: [:show, :edit, :update, :destroy]
 
   def index
-    @elements = Element.all
+    @elements = Element.order(:page)
   end
 
   def new
